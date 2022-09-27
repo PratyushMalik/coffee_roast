@@ -7,7 +7,7 @@ import pandas as pd
 # Initiating app
 app = Flask(__name__)
 # Loading the model
-model = pickle.load(open("coffee_model.pkl", "rb"))
+coffee_model = pickle.load(open("coffee_model.pkl", "rb"))
 
 @app.route('/')
 
@@ -19,7 +19,7 @@ def home():
 def predict_api():
     data=request.json['data']
     print(data)
-    output = model.predict(np.array(list(data.values())).reshape(1,-1))
+    output = coffee_model.predict(np.array(list(data.values())).reshape(1,-1))
     print(output[0])
     return jsonify(output[0])
 
