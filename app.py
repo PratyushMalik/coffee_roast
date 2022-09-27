@@ -3,11 +3,12 @@ import pickle
 from flask import Flask,request,app,jsonify,url_for,render_template
 import numpy as np
 import pandas as pd
+import tensorflow as tf
 
 # Initiating app
 app = Flask(__name__)
 # Loading the model
-coffee_model = pickle.load(open("coffee_model.pkl", "rb"))
+coffee_model = tf.keras.models.load_model("./saved_model")
 
 @app.route('/')
 
