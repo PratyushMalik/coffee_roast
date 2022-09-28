@@ -26,8 +26,10 @@
             Perfecting Your Roast:<br>
             Depending on your oven, it should take 12-15 minutes (max) to roast coffee. If your roasting time exceeds 15 minutes, increase oven temperature by 25°F on your next roast. Coffee that takes more than 15 minutes will taste dull in flavour and is considered “baked” instead of “roasted”.
         </p>
+        <img src="https://github.com/PratyushMalik/coffee_roast/blob/main/roast_chart.png?raw=true" alt="Roast chart">
+        <br>
         <h4>Input the temperature (in celsius) and duration (in minutes) below to know your roast quality.</h4>
-
+        
         <!--Main input for receiving user query to our prediction model -->
         <form action="{{url_for('predict_roast')}}" method="post">
             <input type="text" name="temperature" placeholder="Temperature in celsius" required="required" /><br>
@@ -37,7 +39,6 @@
             <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
         </form>
         <br>
-        <img src="https://github.com/PratyushMalik/coffee_roast/blob/main/roast_chart.png" alt="Roast chart">
         <br>
 
     </div>
