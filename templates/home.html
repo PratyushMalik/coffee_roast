@@ -1,17 +1,43 @@
-<html>
+<!DOCTYPE html>
 <body>
     <div class = "login">
-        <h1>Hello, my fellow coffee enthusiasts!<br>Predict your coffee roast here.</h1>
+        <h1>Hello, my fellow coffee enthusiasts!</h1>
+        <p>Predict your coffee roast here.</p>
+        <p>If fresh coffee is what you seek, nothing beats roasting your own.
+            And (surprisingly enough) most people already have a roaster in their kitchen.
+            That is right, you can roast green coffee beans on a cookie sheet in your oven!
+        </p>
+        <p>
+            Method:<br>
+            Preheat oven to 450°F.
+            Spread a single layer of green beans onto cookie sheet. Shake cookie sheet side-to-side to spread beans evenly and use your hand, or wooden spoon, to create a hole in the center of the mass of beans by moving some aside (See image above).
+            Place cookie sheet in oven on middle rack and take note of the time. Monitor the progression of the beans, checking for an even colouring during the early stages of the roast. (Some ovens require more stirring than others due to hot spots). If required, remove beans from oven, stir them (peferably with a wooden spoon), and quickly replace in oven without losing too much heat.
+            In approx. 6 to 8 minutes you will hear what is called “first crack”, characterized by a distinct popping sound. Watch your beans closely now. Between 10-15 minutes, as the beans reach 435°F, the “second crack” begins and signals that the beans are entering a medium roast. (If required, this is a good time to stir the beans to ensure an even roast). Second crack is characterized by a softer-sounding and more rapid crackling noise, which means that the sugars within the beans are caramelizing.
+            Once the beans have browned to your desired degree of roast, take them out of the oven and transfer all beans (plus chaff, or “outer skin” that comes off the beans) to a heat-resistant bowl for cooling. The faster the beans cool, the better. To separate chaff from beans, simply take the bowl outside and blow on the beans while swirling them around in the bowl (this is called “winnowing”). Small pieces of remaining chaff are not a concern and will not affect the end cup. Once cool, grind fresh and enjoy immediately! Coffee can only be considered fresh within 1-7 days from roasting. After roasting your own, you can decide on what you consider to be the definition of “fresh”.
+        </p>
+        <p>
+            Targeting Roast Degree:<br>
+            Light Roast (occurs between first and second crack): First crack has occurred; beans are light brown and dry on the surface. Second crack is about to start.
+            Medium Roast (occurs at second crack): Second crack has begun; beans are a deeper brown with a slight sheen (or satin-like finish) just starting to appear on the surface.
+            Dark Roast (occurs into second crack): Beans are dark brown with shiny surface oils and are cracking rapidly.
+            Burnt: Beans are black, oily and smoking hot. Smoke will be blue in colour and it will smell burnt.
+        </p>
+        <p>
+            Perfecting Your Roast:<br>
+            Depending on your oven, it should take 12-15 minutes (max) to roast coffee. If your roasting time exceeds 15 minutes, increase oven temperature by 25°F on your next roast. Coffee that takes more than 15 minutes will taste dull in flavour and is considered “baked” instead of “roasted”.
+        </p>
+        <h4>Input the temperature (in celsius) and duration (in minutes) below to know your roast quality.</h4>
 
         <!--Main input for receiving user query to our prediction model -->
         <form action="{{url_for('predict_roast')}}" method="post">
-            <input type="text" name="temperature" placeholder="Temperature in Fahrenheit" required="required" /><br>
-            <input type="text" name="time" placeholder="Time period in minutes" required="required" /><br>
+            <input type="text" name="temperature" placeholder="Temperature in celsius" required="required" /><br>
+            <input type="text" name="time" placeholder="Duration in minutes" required="required" /><br>
             <br>
             <br>
             <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
         </form>
         <br>
+        <img src="D:\Study\Projects\Coffee Roast\coffee_roast\roast_chart.png" alt="Roast chart">
         <br>
 
     </div>
