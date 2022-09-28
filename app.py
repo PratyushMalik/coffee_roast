@@ -15,17 +15,17 @@ coffee_model = tf.keras.models.load_model("./saved_model")
 def home():
     return render_template("home.html")
 
-@app.route('/predict_api',methods=['POST'])
+# @app.route('/predict_api',methods=['POST'])
 
-def predict_api():
-    data=request.json['data']
-    print(data)
-    prediction = coffee_model.predict(np.array(list(data.values())).reshape(1,-1))
-    print(prediction)
-    if prediction >= 0.5:
-        return "Good Roast"
-    else:
-        return "Bad Roast"
+# def predict_api():
+#     data=request.json['data']
+#     print(data)
+#     prediction = coffee_model.predict(np.array(list(data.values())).reshape(1,-1))
+#     print(prediction)
+#     if prediction >= 0.5:
+#         return "Good Roast"
+#     else:
+#         return "Bad Roast"
 
 @app.route('/predict_roast', methods=['POST'])
 
