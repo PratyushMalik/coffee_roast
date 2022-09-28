@@ -1,5 +1,5 @@
 Flask
 numpy
 pandas
-tensorflow
+tensorflow-cpu
 gunicorn
