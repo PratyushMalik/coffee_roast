@@ -20,9 +20,11 @@ def home():
 def predict_api():
     data=request.json['data']
     print(data)
-    output = coffee_model.predict(np.array(list(data.values())).reshape(1,-1))
-    print(output[0])
-    return jsonify(output[0])
+    prediction = coffee_model.predict(np.array(list(data.values())).reshape(1,-1))
+    if prediction >= 0.5:
+        return "Good Roast"
+    else:
+        return "Bad Roast"
 
 if __name__ == '__main__':
     app.run(debug=True)
