@@ -21,10 +21,23 @@ def predict_api():
     data=request.json['data']
     print(data)
     prediction = coffee_model.predict(np.array(list(data.values())).reshape(1,-1))
+    print(prediction)
     if prediction >= 0.5:
         return "Good Roast"
     else:
         return "Bad Roast"
+
+@app.route('/predict_roast', methods=['POST'])
+
+def predict_roast():
+    data = [float(x) for x in request.form.values()]
+    print(data)
+    prediction = coffee_model.predict(np.array(data).reshape(1,-1))
+    print(prediction)
+    if prediction >= 0.5:
+        return render_template("home.html", predicted_roast = "The coffee will be roasted nicely")
+    else:
+        return render_template("home.html", predicted_roast = "Not a properly roasted coffee")
 
 if __name__ == '__main__':
     app.run(debug=True)
