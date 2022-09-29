@@ -3,6 +3,9 @@ Predict roasting temperature and time period for a delicious coffee.
 The dataset in this project is formed by a set of trials done by Dr Andrew Ng, as instructed by him in the Deeplearning.ai course.
 Read the roast instructions for better understanding of the step by step process of roasting.
 
+Here is the final page link.
+[coffee_heroku_app] https://coffee-roast-prediction.herokuapp.com/
+
 # software and tools requirements
 1. [GithubAccount] https://github.com/
 2. [VSCodeIDE] https://code.visualstudio.com/
